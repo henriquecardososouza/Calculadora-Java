@@ -55,6 +55,7 @@ public class Tela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setForeground(new java.awt.Color(0, 0, 0));
+        setLocation(new java.awt.Point(500, 300));
         setResizable(false);
 
         kGradientPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -258,8 +259,7 @@ public class Tela extends javax.swing.JFrame {
         jButton12.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(255, 255, 255));
         jButton12.setText("=");
-        jButton12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton12.setBorderPainted(false);
+        jButton12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton12.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -706,19 +706,6 @@ public class Tela extends javax.swing.JFrame {
         operator = "+";
     }//GEN-LAST:event_jButton8MouseClicked
 
-    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
-        if (actualScreen > 1) {
-            if (num2.length() > 0) {
-                if (num2.substring(num2.length() - 1, num2.length()).equals(".")) {
-                    num2 += "0";
-                }
-                
-                valor2 = Double.parseDouble(num2);
-                executeOperation();
-            }
-        }
-    }//GEN-LAST:event_jButton12MouseClicked
-
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         resultCriado = false;
         
@@ -804,6 +791,19 @@ public class Tela extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        if (actualScreen > 1) {
+            if (num2.length() > 0) {
+                if (num2.substring(num2.length() - 1, num2.length()).equals(".")) {
+                    num2 += "0";
+                }
+
+                valor2 = Double.parseDouble(num2);
+                executeOperation();
+            }
+        }
+    }//GEN-LAST:event_jButton12MouseClicked
 
     private void atualizaScreen() {
         if (actualScreen == 1) {
